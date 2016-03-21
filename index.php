@@ -36,6 +36,17 @@
 
 <body id="page-top">
 
+  <script>
+  (function (window, document) {
+    var loader = function () {
+      var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+      script.src = "https://young-tundra-62254.herokuapp.com/dist/widget.min.js";
+      tag.parentNode.insertBefore(script, tag);
+    };
+    window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+  })(window, document);
+  </script>
+
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -254,7 +265,7 @@
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
+                    <div id="odun-rtc-video-widget"></div>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
